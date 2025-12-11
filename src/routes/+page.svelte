@@ -1,5 +1,7 @@
 <script>
     import Navbar from '$lib/components/navbar.svelte';
+    import Toastfooter from "$lib/components/general/toastfooter.svelte";
+    import Diapositive from "$lib/components/main/diapositive.svelte";
 
     const links = [
         { href: '#', label: 'Link 1', color: '#fff', hoverColor: '#ff7a18' },
@@ -11,16 +13,16 @@
 </script>
 
 <Navbar {links} />
-
-<div class="diapositive" id="pageA">
+<Diapositive style="background-color: lightcoral;">
     <h1>Page A</h1>
-</div>
-<div class="diapositive" id="pageB">
+</Diapositive>
+<Diapositive style="background-color: lightseagreen;">
     <h1>Page B</h1>
-</div>
-<div class="diapositive" id="pageC">
+</Diapositive>
+<Diapositive style="background-color: lightgoldenrodyellow;">
     <h1>Page C</h1>
-</div>
+    <Toastfooter />
+</Diapositive>
 
 <style>
     :global(html, body) {
@@ -29,35 +31,5 @@
         width: 100%;
         height: 100%;
         font-family: Arial, sans-serif;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-    }
-
-    .diapositive {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-align: start;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .diapositive h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    #pageA {
-        background-color: lightcoral;
-    }
-
-    #pageB {
-        background-color: lightseagreen;
-    }
-
-    #pageC {
-        background-color: lightgoldenrodyellow;
     }
 </style>
