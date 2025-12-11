@@ -1,15 +1,9 @@
 <script>
-    import Navbar from '$lib/components/navbar.svelte';
+    import Navbar from '$lib/components/general/navbar.svelte';
     import Toastfooter from "$lib/components/general/toastfooter.svelte";
     import Diapositive from "$lib/components/main/diapositive.svelte";
 
-    const links = [
-        { href: '#', label: 'Link 1', color: '#fff', hoverColor: '#ff7a18' },
-        { href: '#', label: 'Link 2', color: '#fff', hoverColor: '#ff7a18' },
-        { href: '#', label: 'Link 3', color: '#fff', hoverColor: '#ff7a18' },
-        { href: '#', label: 'Link 4', color: '#fff', hoverColor: '#ff7a18' },
-        { href: '#', label: 'Link 5', color: '#fff', hoverColor: '#ff7a18' }
-    ];
+    import links from '$lib/ressources/general/navlinks.json';
 </script>
 
 <Navbar {links} />
