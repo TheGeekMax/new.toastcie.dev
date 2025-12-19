@@ -2,7 +2,7 @@
     let props = $props();
 </script>
 
-<div {...props}>
+<div {...props} class="diapo-container">
     {@render props.children()}
 </div>
 
