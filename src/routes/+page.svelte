@@ -5,14 +5,15 @@
     import Sky from '$lib/components/main/sky.svelte';
     import Sidebarlink from '$lib/components/general/navigation/sidebarlink.svelte';
     import { onMount } from 'svelte';
-    import { House, CircleUser, BookmarkCheck, FolderClosed, Contact } from '@lucide/svelte';
+    import { House, CircleUser, BookmarkCheck, FolderClosed, Contact, Rocket } from '@lucide/svelte';
 
     const Sections = {
         HOME: 0,
         ABOUT: 1,
-        SKILLS: 2,
-        PROJECTS: 3,
-        CONTACT: 4
+        JOURNEY: 2,
+        SKILLS: 3,
+        PROJECTS: 4,
+        CONTACT: 5
     } as const;
 
     let selected : number = Sections.HOME;
@@ -62,12 +63,18 @@
         onclick={() => handleClick(Sections.HOME)} 
         selected={selected === Sections.HOME}
     ><House size={20} strokeWidth={2}/></Sidebarlink>
-    <Sidebarlink
+        <Sidebarlink
         label="Qui suis-je"
         link="/"
         onclick={() => handleClick(Sections.ABOUT)} 
         selected={selected === Sections.ABOUT}
     ><CircleUser size={20} strokeWidth={2}/></Sidebarlink>
+    <Sidebarlink
+        label="Mon parcours"
+        link="/"
+        onclick={() => handleClick(Sections.JOURNEY)} 
+        selected={selected === Sections.JOURNEY}
+    ><Rocket size={20} strokeWidth={2}/></Sidebarlink>
     <Sidebarlink
         label="Competences"
         link="/"
@@ -95,6 +102,10 @@
 <Diapositive>
     <Sky topColor="var(--night-color-1)" bottomColor="var(--night-color-2)" />
     <h1>Qui suis-je</h1>
+</Diapositive>
+<Diapositive>
+    <Sky topColor="var(--night-color-2)" bottomColor="var(--night-color-2)" />
+    <h1>Mon parcours</h1>
 </Diapositive>
 <Diapositive>
     <Sky topColor="var(--night-color-2)" bottomColor="var(--night-color-3)" />
