@@ -98,81 +98,26 @@
 <Diapositive >
     <Sky topColor="var(--night-color-1)" bottomColor="var(--night-color-1)" />
     <h1>Home</h1>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
 </Diapositive>
 <Diapositive>
     <Sky topColor="var(--night-color-1)" bottomColor="var(--night-color-2)" />
     <h1>Qui suis-je</h1>
-
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
 </Diapositive>
 <Diapositive>
     <Sky topColor="var(--night-color-2)" bottomColor="var(--night-color-2)" />
     <h1>Mon parcours</h1>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
 </Diapositive>
 <Diapositive>
     <Sky topColor="var(--night-color-2)" bottomColor="var(--night-color-3)" />
     <h1>Competences</h1>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
 </Diapositive>
 <Diapositive>
     <Sky topColor="var(--night-color-3)" bottomColor="var(--night-color-4)" />
     <h1>Projet recents (3 derniers)</h1>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
 </Diapositive>
 <Diapositive >
     <Sky topColor="var(--night-color-4)" bottomColor="var(--night-color-5)" />
     <h1>Me contacter</h1>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
-    <p>LUTIN LUTIN</p>
     <Toastfooter />
 </Diapositive>
 
@@ -196,19 +141,5 @@
 
     :global(.diapo-container::-webkit-scrollbar) {
         display: none;
-    }
-
-    :global(p) {
-        animation: colorChange 5s ease-in-out infinite;
-    }
-
-    @keyframes colorChange {
-        0% { color: #ff6b6b; }
-        16.66% { color: #ffd93d; }
-        33.33% { color: #6bcf7f; }
-        50% { color: #4d96ff; }
-        66.66% { color: #c77dff; }
-        83.33% { color: #ff6baf; }
-        100% { color: #ff6b6b; }
     }
 </style>
