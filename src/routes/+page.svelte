@@ -1,5 +1,6 @@
 <script lang="ts">
     import Sidebar from '$lib/components/general/sidebar.svelte';
+    import Home from '$lib/components/main/home.svelte';
     import Toastfooter from "$lib/components/general/toastfooter.svelte";
     import Diapositive from "$lib/components/main/diapositive.svelte";
     import Sky from '$lib/components/main/sky.svelte';
@@ -97,7 +98,7 @@
 
 <Diapositive >
     <Sky topColor="var(--night-color-1)" bottomColor="var(--night-color-1)" />
-    <h1>Home</h1>
+    <Home/>
 </Diapositive>
 <Diapositive>
     <Sky topColor="var(--night-color-1)" bottomColor="var(--night-color-2)" />
