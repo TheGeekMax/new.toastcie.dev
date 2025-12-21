@@ -57,7 +57,7 @@
     });
 </script>
 
-<Sidebar>
+<Sidebar {selected}>
     <Sidebarlink
         label="Home"
         link="/"
