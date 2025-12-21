@@ -147,8 +147,8 @@
 	
 	.role {
 		display: block;
-		font-size: 1.5rem;
-		color: #ffffff;
+		font-size: 1.3rem;
+		color: #c4c0d0;
 		font-weight: 300;
 		letter-spacing: 0;
 		white-space: nowrap;
