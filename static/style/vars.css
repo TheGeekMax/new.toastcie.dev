@@ -20,3 +20,9 @@
     --night-color-4: #C4595F;
     --night-color-5: #d8a133ff;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}

@@ -1,13 +1,22 @@
 <script lang="ts">
     let { children, selected = 0 } = $props();
     
-    // Sidebar top (50px) + padding (20px) + half of first link (~28px) = 98px base
-    // Each link: 16px padding top + 16px padding bottom + 10px margin top + 10px margin bottom + ~20px content = 72px
-    let arrowTop = $derived(94 + (selected * 65.5));
+    let arrowTop = $state(0);
+    let asideElement: HTMLElement | null = null;
+    
+    $effect(() => {
+        if (asideElement) {
+            const links = asideElement.querySelectorAll('a');
+            if (links[selected]) {
+                const linkRect = links[selected].getBoundingClientRect();
+                arrowTop = linkRect.top + (linkRect.height / 2) - 16;
+            }
+        }
+    });
 </script>
 
 
-<aside>
+<aside bind:this={asideElement}>
 	{@render children()}
 </aside>
 
