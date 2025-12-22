@@ -23,7 +23,7 @@
         const diapoElements = document.getElementsByClassName('diapo-container');
         if (diapoElements.length > section) {
             const targetDiapo = diapoElements[section] as HTMLElement;
-            targetDiapo.scrollIntoView({ behavior: 'smooth' });
+            targetDiapo.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
             selected = section;
         }
     }
@@ -134,6 +134,7 @@
         color: var(--font-color);
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none; /* IE and Edge */
+        scroll-behavior: smooth;
     }
 
     :global(html::-webkit-scrollbar, body::-webkit-scrollbar) {
