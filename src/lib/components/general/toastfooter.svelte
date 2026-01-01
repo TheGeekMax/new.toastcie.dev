@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-    @{year} Toastcie.dev, All rights reserved.
+    @2025-{year} Toastcie.dev, All rights reserved.
 </footer>
 
 <style>
