@@ -23,6 +23,16 @@
         padding: 20px;
         box-sizing: border-box;
         position: relative;
+        z-index: 0;
+    }
+
+    div > :global(*:not(canvas):not(footer)) {
+        position: relative;
+        z-index: 1;
+    }
+
+    div > :global(footer) {
+        z-index: 10;
     }
 
     h1 {

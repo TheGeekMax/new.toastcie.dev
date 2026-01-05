@@ -7,6 +7,7 @@
     import Sidebarlink from '$lib/components/general/navigation/sidebarlink.svelte';
     import { onMount } from 'svelte';
     import { House, CircleUser, BookmarkCheck, FolderClosed, Contact, Rocket } from '@lucide/svelte';
+    import Aboutme from '$lib/components/main/aboutme.svelte';
 
     const Sections = {
         HOME: 0,
@@ -102,7 +103,7 @@
 </Diapositive>
 <Diapositive>
     <Sky topColor="var(--night-color-1)" bottomColor="var(--night-color-2)" />
-    <h1>Qui suis-je</h1>
+    <Aboutme />
 </Diapositive>
 <Diapositive>
     <Sky topColor="var(--night-color-2)" bottomColor="var(--night-color-2)" />
@@ -132,6 +133,7 @@
         overflow-x: hidden;
         font-family: Arial, sans-serif;
         color: var(--font-color);
+        background-color: var(--night-color-1);
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none; /* IE and Edge */
         scroll-behavior: smooth;
