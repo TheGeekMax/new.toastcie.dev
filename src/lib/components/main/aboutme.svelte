@@ -1,18 +1,22 @@
 <script lang="ts">
 	import { fly, fade } from 'svelte/transition';
-	import { User, Code2, Lightbulb, Heart } from '@lucide/svelte';
+	import { User, Code2, Lightbulb, Heart, Cpu } from '@lucide/svelte';
 </script>
 
 <div class="about-container">
 	<div class="left-content">
+		<div class="profile-image">
+			<img src="/img/trauma.png" alt="Profile" />
+		</div>
 		<div class="section-header">
 			<User size={48} class="header-icon" />
 			<h2 class="section-title">À Propos</h2>
 		</div>
 		<div class="intro-text">
 			<p class="main-description">
-				Passionné par la technologie et l'innovation, je suis un développeur qui aime créer 
-				des expériences numériques uniques et engageantes.
+				Étudiant ingénieur en informatique, créatif mais structuré,
+                je construis des projets par envie réelle, pas par obligation.
+                J'avance vite, j'apprends en faisant, et je préfère le concret au discours.
 			</p>
 		</div>
 	</div>
@@ -29,19 +33,19 @@
 				</div>
 				<h3 class="card-title">Développement</h3>
 				<p class="card-description">
-					Créateur d'applications web et de jeux, avec une expertise en développement full-stack 
-					et une passion pour les nouvelles technologies.
+					Je développe des applications, des jeux et des systèmes avec une approche pragmatique :
+                    efficacité, lisibilité et robustesse. Le fond passe toujours avant l'effet.
 				</p>
 			</div>
 			
 			<div class="info-card">
 				<div class="card-icon">
-					<Lightbulb size={32} />
+					<Cpu size={32} />
 				</div>
-				<h3 class="card-title">Innovation</h3>
+				<h3 class="card-title">Technique</h3>
 				<p class="card-description">
-					Toujours à la recherche de solutions créatives et efficaces pour résoudre 
-					des problèmes complexes.
+					Entre développement logiciel et DevOps, j'aime travailler là où la logique,
+                    l'architecture et l'automatisation se rencontrent. Moins de magie, plus de maîtrise.
 				</p>
 			</div>
 			
@@ -51,8 +55,8 @@
 				</div>
 				<h3 class="card-title">Passion</h3>
 				<p class="card-description">
-					Engagé dans le partage de connaissances en tant que tuteur, 
-					j'aime aider les autres à progresser dans le monde du développement.
+					Je code par curiosité avant tout. Comprendre comment les choses fonctionnent,
+                    les démonter, puis les reconstruire proprement est ce qui me motive depuis très longtemps.
 				</p>
 			</div>
 		</div>
@@ -106,6 +110,20 @@
 		margin: 0;
 	}
 	
+	.profile-image {
+		margin-bottom: 2rem;
+		width: 100%;
+		max-width: 150px;
+	}
+	
+	.profile-image img {
+		width: 100%;
+		height: auto;
+		border-radius: 12px;
+		border: 2px solid rgba(150, 200, 255, 0.3);
+		box-shadow: 0 0 20px rgba(120, 180, 255, 0.3);
+	}
+	
 	/* Center Divider */
 	.center-divider {
 		display: flex;
@@ -116,7 +134,7 @@
 	
 	.vertical-line {
 		width: 3px;
-		height: 400px;
+		height: 600px;
 		background: linear-gradient(
 			to bottom,
 			rgba(150, 200, 255, 0.8) 0%,
