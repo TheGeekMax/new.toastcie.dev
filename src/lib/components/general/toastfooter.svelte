@@ -12,20 +12,16 @@
         position: absolute;
         text-align: center;
         font-size: 0.9rem;
-        bottom:15px;
-        left: 0;
-        right: 0;
-        width: 100%;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 10;
         padding: 12px 20px;
         display: inline-block;
         width: auto;
         max-width: calc(100% - 40px);
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
         box-sizing: border-box;
-        overflow-y: auto;
+        white-space: nowrap;
 
         background: var(--color-normal);
         backdrop-filter: blur(30px);

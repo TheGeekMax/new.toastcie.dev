@@ -133,6 +133,7 @@
         overflow-x: hidden;
         font-family: Arial, sans-serif;
         color: var(--font-color);
+        background-color: var(--night-color-1);
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none; /* IE and Edge */
         scroll-behavior: smooth;
