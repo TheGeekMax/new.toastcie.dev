@@ -3,7 +3,7 @@
 	import { fly, fade } from 'svelte/transition';
 	
 	let currentRoleIndex = 0;
-	let roles = ['Developeur', 'Game Designer', 'Ingénieur', 'Tuteur', 'DevOps Enthusiast', 'Tech Lover', 'Unity User'];
+	let roles = ['Developpeur', 'Game Designer', 'Ingénieur', 'Tuteur', 'DevOps Enthusiast', 'Tech Lover', 'Unity User'];
 	
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -38,7 +38,9 @@
 	</div>
 	
 	<div class="right-content">
-		<p class="description">lorem ipsum</p>
+		<p class="description">
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, autem quod inventore ea saepe nemo cupiditate libero, molestias nihil sed nulla excepturi impedit amet molestiae sapiente temporibus et veritatis placeat?
+		</p>
 	</div>
 </div>
 
