@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>toastcie.dev</title>
+	<title>Toastcie.dev</title>
 	
 	<meta name="description" content="Portfolio d'un développeur passionné. Découvrez mes projets, compétences et parcours dans le développement logiciel et DevOps." />
 	<meta name="keywords" content="développeur, portfolio, dev, projets, DevOps, ingénieur informatique" />

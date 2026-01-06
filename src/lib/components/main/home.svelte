@@ -108,9 +108,9 @@
 		margin-top: -5px;
 		filter: blur(1.5px);
 		box-shadow: 
-			0 -5px 25px rgba(120, 180, 255, 0.7),
-			0 0 35px rgba(80, 140, 255, 0.5),
-			0 10px 25px rgba(60, 120, 240, 0.3);
+			0 0 20px rgba(120, 180, 255, 0.8),
+			0 0 40px rgba(80, 140, 255, 0.6),
+			0 0 60px rgba(100, 160, 255, 0.4);
 	}
 	
 	/* Content Sections */

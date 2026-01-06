@@ -8,6 +8,7 @@
     import { onMount } from 'svelte';
     import { House, CircleUser, BookmarkCheck, FolderClosed, Contact, Rocket } from '@lucide/svelte';
     import Aboutme from '$lib/components/main/aboutme.svelte';
+    import Contactme from '$lib/components/main/contactme.svelte';
 
     const Sections = {
         HOME: 0,
@@ -119,7 +120,7 @@
 </Diapositive>
 <Diapositive >
     <Sky topColor="var(--night-color-4)" bottomColor="var(--night-color-5)" />
-    <h1>Me contacter</h1>
+    <Contactme />
     <Toastfooter />
 </Diapositive>
 
