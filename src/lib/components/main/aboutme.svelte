@@ -14,9 +14,10 @@
 		</div>
 		<div class="intro-text">
 			<p class="main-description">
-				Étudiant ingénieur en informatique, créatif mais structuré,
-                je construis des projets par envie réelle, pas par obligation.
-                J'avance vite, j'apprends en faisant, et je préfère le concret au discours.
+				Étudiant ingénieur en informatique,
+                je programme par pure passion.
+                Je fais pleins de projets pour approfondir mes compétences
+				sur pleins de domaines, du jeux video aux DevOps.
 			</p>
 		</div>
 	</div>
@@ -108,6 +109,7 @@
 		font-weight: 300;
 		line-height: 1.8;
 		margin: 0;
+		text-align: justify;
 	}
 	
 	.profile-image {
@@ -203,6 +205,7 @@
 		font-weight: 300;
 		line-height: 1.6;
 		margin: 0;
+		text-align: justify;
 	}
 	
 	/* Header Icon */
