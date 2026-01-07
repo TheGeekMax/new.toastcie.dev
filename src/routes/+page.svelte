@@ -9,6 +9,7 @@
     import { House, CircleUser, BookmarkCheck, FolderClosed, Contact, Rocket } from '@lucide/svelte';
     import Aboutme from '$lib/components/main/aboutme.svelte';
     import Contactme from '$lib/components/main/contactme.svelte';
+    import Competenses from '$lib/components/main/competenses.svelte';
 
     const Sections = {
         HOME: 0,
@@ -79,7 +80,7 @@
         selected={selected === Sections.JOURNEY}
     ><Rocket size={20} strokeWidth={2}/></Sidebarlink>
     <Sidebarlink
-        label="Competences"
+        label="Compétences"
         link="/"
         onclick={() => handleClick(Sections.SKILLS)} 
         selected={selected === Sections.SKILLS}
@@ -112,7 +113,7 @@
 </Diapositive>
 <Diapositive>
     <Sky topColor="var(--night-color-2)" bottomColor="var(--night-color-3)" />
-    <h1>Competences</h1>
+    <Competenses />
 </Diapositive>
 <Diapositive>
     <Sky topColor="var(--night-color-3)" bottomColor="var(--night-color-4)" />
