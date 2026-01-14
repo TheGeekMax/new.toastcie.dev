@@ -4,86 +4,30 @@
         Atom, Database, Zap, FileCode, Moon, Terminal,
         Circle, Palette, Brain, Triangle, Apple, Container, Ship
     } from '@lucide/svelte';
-
-    import type { Component } from 'svelte';
-
-    const skillsRow1: Array<{ name: string; description: string; icon: Component }> = [
-        { name: 'Python', description: 'Maîtrise niveau expert', icon: Code2 },
-        { name: 'JavaScript', description: 'Développement frontend & backend', icon: FileJson },
-        { name: 'Java', description: 'Applications d\'entreprise', icon: Coffee },
-        { name: 'Kotlin', description: 'Développement Android', icon: Smartphone },
-        { name: 'C#', description: 'Développement .NET', icon: Hash },
-        { name: 'F#', description: 'Programmation fonctionnelle', icon: Hexagon },
-    ];
-
-    const skillsRow2: Array<{ name: string; description: string; icon: Component }> = [
-        { name: 'React.js', description: 'Bibliothèque UI', icon: Atom },
-        { name: 'SQL', description: 'Base de données', icon: Database },
-        { name: 'C++', description: 'Programmation système', icon: Zap },
-        { name: 'Caml', description: 'Programmation fonctionnelle', icon: FileCode },
-        { name: 'Lua', description: 'Langage de script', icon: Moon },
-        { name: 'Bash', description: 'Script shell', icon: Terminal },
-    ];
-
-    const skillsRow3: Array<{ name: string; description: string; icon: Component }> = [
-        { name: 'Node.js', description: 'Développement backend', icon: Circle },
-        { name: 'UI/UX Design', description: 'Conception d\'interface & prototypage', icon: Palette },
-        { name: 'AI & Machine Learning', description: 'Développement & déploiement de modèles', icon: Brain },
-        { name: 'Next.js', description: 'Framework React', icon: Triangle },
-        { name: 'Swift', description: 'Développement iOS', icon: Apple },
-        { name: 'Docker', description: 'Conteneurisation', icon: Container },
-        { name: 'Kubernetes', description: 'Orchestration de conteneurs', icon: Ship },
-    ];
+    import SkillCard from './skillcard.svelte';
 </script>
 
 <section id="competences" class="competences-section">
     <h2>Compétences</h2>
     
-    <div class="skills-container">
-        <!-- Row 1: Left to Right -->
-        <div class="skills-row">
-            <div class="skills-track animate-ltr">
-                {#each [...skillsRow1, ...skillsRow1] as skill}
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <svelte:component this={skill.icon} size={32} strokeWidth={1.5} />
-                        </div>
-                        <h3>{skill.name}</h3>
-                        <p>{skill.description}</p>
-                    </div>
-                {/each}
-            </div>
-        </div>
-
-        <!-- Row 2: Right to Left -->
-        <div class="skills-row">
-            <div class="skills-track animate-rtl">
-                {#each [...skillsRow2, ...skillsRow2] as skill}
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <svelte:component this={skill.icon} size={32} strokeWidth={1.5} />
-                        </div>
-                        <h3>{skill.name}</h3>
-                        <p>{skill.description}</p>
-                    </div>
-                {/each}
-            </div>
-        </div>
-
-        <!-- Row 3: Left to Right -->
-        <div class="skills-row">
-            <div class="skills-track animate-ltr">
-                {#each [...skillsRow3, ...skillsRow3] as skill}
-                    <div class="skill-card">
-                        <div class="skill-icon">
-                            <svelte:component this={skill.icon} size={32} strokeWidth={1.5} />
-                        </div>
-                        <h3>{skill.name}</h3>
-                        <p>{skill.description}</p>
-                    </div>
-                {/each}
-            </div>
-        </div>
+    <div class="skills-grid">
+        <SkillCard icon={Code2} label="Python" description="Maîtrise niveau expert" cellWidth={2} />
+        <SkillCard icon={FileJson} label="JavaScript" description="Développement frontend & backend" cellWidth={1} />
+        <SkillCard icon={Atom} label="React.js" description="Bibliothèque UI" cellWidth={2} />
+        <SkillCard icon={Database} label="SQL" description="Base de données" cellWidth={1} />
+        <SkillCard icon={Zap} label="C++" description="Programmation système" cellWidth={1} />
+        <SkillCard icon={Circle} label="Node.js" description="Développement backend" cellWidth={2} />
+        <SkillCard icon={Triangle} label="Next.js" description="Framework React" cellWidth={1} />
+        <SkillCard icon={Coffee} label="Java" description="Applications d'entreprise" cellWidth={2} />
+        <SkillCard icon={Smartphone} label="Kotlin" description="Développement Android" cellWidth={2} />
+        <SkillCard icon={Hash} label="C#" description="Développement .NET" cellWidth={2} />
+        <SkillCard icon={Apple} label="Swift" description="Développement iOS" cellWidth={1} />
+        <SkillCard icon={Container} label="Docker" description="Conteneurisation" cellWidth={1} />
+        <SkillCard icon={Ship} label="Kubernetes" description="Orchestration de conteneurs" cellWidth={1} />
+        <SkillCard icon={FileCode} label="Caml" description="Programmation fonctionnelle" cellWidth={1} />
+        <SkillCard icon={Moon} label="Lua" description="Langage de script" cellWidth={1} />
+        <SkillCard icon={Terminal} label="Bash" description="Script shell" cellWidth={1} />
+        <SkillCard icon={Hexagon} label="F#" description="Programmation fonctionnelle" cellWidth={2} />
     </div>
 </section>
 
@@ -91,115 +35,25 @@
     .competences-section {
         width: 100%;
         padding: 4rem 2rem;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     h2 {
         text-align: center;
         color: #fff;
         font-size: 2.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
         font-weight: 700;
     }
 
-    .skills-container {
-        display: flex;
-        flex-direction: column;
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
         gap: 1rem;
-    }
-
-    .skills-row {
+        max-width: 1000px;
         width: 100%;
-        overflow: visible;
-        position: relative;
-        mask-image: linear-gradient(
-            to right,
-            transparent,
-            black 10%,
-            black 90%,
-            transparent
-        );
-        padding: 10px 0;
-    }
-
-    .skills-track {
-        display: flex;
-        gap: 1.5rem;
-        width: fit-content;
-    }
-
-    .animate-ltr {
-        animation: scroll-ltr 30s linear infinite;
-    }
-
-    .animate-rtl {
-        animation: scroll-rtl 30s linear infinite;
-    }
-
-    .skill-card:hover {
-        animation-play-state: running;
-    }
-
-    @keyframes scroll-ltr {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
-
-    @keyframes scroll-rtl {
-        0% {
-            transform: translateX(-50%);
-        }
-        100% {
-            transform: translateX(0);
-        }
-    }
-
-    .skill-card {
-        min-width: 280px;
-        height: 110px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 16px;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        position: relative;
-        will-change: transform;
-    }
-
-    .skill-card:hover {
-        transform: translateY(-5px) translateZ(0);
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.4);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .skill-icon {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .skill-card h3 {
-        color: #fff;
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin: 0 0 0.5rem 0;
-    }
-
-    .skill-card p {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.9rem;
-        margin: 0;
-        line-height: 1.4;
     }
 
     @media (max-width: 768px) {
@@ -211,13 +65,15 @@
             font-size: 2rem;
         }
 
-        .skill-card {
-            min-width: 240px;
-            height: 100px;
+        .skills-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
 
-        .skills-container {
-            gap: 1.5rem;
+        .skill-card.large,
+        .skill-card.medium {
+            grid-column: span 1;
+            min-height: 120px;
         }
     }
 </style>

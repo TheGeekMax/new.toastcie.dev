@@ -1,14 +1,14 @@
 [
     {
-        "href": "#",
-        "label": "Link 1"
+        "href": "https://toastcie.dev",
+        "label": "Home"
     },
     {
-        "href": "#",
-        "label": "Link 2"
+        "href": "https://new.toastcie.dev/projects",
+        "label": "Projets"
     },
     {
-        "href": "#",
-        "label": "Link 3"
+        "href": "https://cours.toastcie.dev",
+        "label": "Cours"
     }
 ]
