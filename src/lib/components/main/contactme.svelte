@@ -133,7 +133,7 @@
 		color: #b4d9ff;
 		font-size: 1rem;
 		font-weight: 600;
-		letter-spacing: 0.5px;
+		letter-spacing: 0.5px; 
 	}
 	
 	.form-group input,
