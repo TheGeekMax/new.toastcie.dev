@@ -39,7 +39,9 @@
 	
 	<div class="right-content">
 		<p class="description">
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, autem quod inventore ea saepe nemo cupiditate libero, molestias nihil sed nulla excepturi impedit amet molestiae sapiente temporibus et veritatis placeat?
+			Je développe des jeux avec Unity, et je m'intéresse aussi beaucoup au Java et au web.
+			Ce portfolio présente mes projets personnels,
+			mes expériences ainsi que ma manière d'aborder le dev.
 		</p>
 	</div>
 </div>
@@ -168,6 +170,7 @@
 		margin: 0;
 		max-width: 300px;
 		line-height: 1.6;
+		text-align: justify;
 	}
 	
 	/* Animations */
